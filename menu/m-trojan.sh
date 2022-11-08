@@ -20,9 +20,9 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear 
-echo -e "\e[33m==============================================\033[0m"
-echo -e "\E[0;100;33m				< TROJAN MENU >       \E[0m"
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
+echo -e "\E[0;100;33m				  TROJAN MENU         \E[0m"
+echo -e "\e[1m==============================================\033[0m"
 echo -e ""
 echo -e " [\e[36m•1\e[0m] CREATE ACCOUNT TROJAN "
 echo -e " [\e[36m•2\e[0m] TRIAL ACCOUNT TROJAN "
@@ -34,7 +34,7 @@ echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e   ""
 echo -e   "PRESS X OR [ CTRL+C ] • TO-EXIT"
 echo ""
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
 echo -e ""
 read -p " SELECT MENU : " opt
 echo -e ""

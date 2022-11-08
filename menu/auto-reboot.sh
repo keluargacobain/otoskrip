@@ -31,9 +31,9 @@ echo '/sbin/shutdown -r now' >> /usr/local/bin/reboot_otomatis
 chmod +x /usr/local/bin/reboot_otomatis
 fi
 clear
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
 echo -e "\e[0;100;33m       < AUTO-REBOOT MENU >        \e[0m"
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
 echo -e ""
 echo -e "[\e[36m•1\e[0m] Set Auto-Reboot Setiap 1 Jam"
 echo -e "[\e[36m•2\e[0m] Set Auto-Reboot Setiap 6 Jam"
@@ -49,7 +49,7 @@ echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e ""
 echo -e "Press x or [ Ctrl+C ] • To-Exit"
 echo -e ""
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
 echo -e ""
 read -p " Select menu : " x
 if test $x -eq 1; then
@@ -76,40 +76,40 @@ echo "Auto-Reboot successfully TURNED OFF."
 elif test $x -eq 8; then
 if [ ! -e /root/log-reboot.txt ]; then
 	clear
-    echo -e "\e[33m==============================================\033[0m"
-    echo -e "\e[0;100;33m        < AUTO-REBOOT LOG >        \e[0m"
-    echo -e "\e[33m==============================================\033[0m"
+    echo -e "\e[1m==============================================\033[0m"
+    echo -e "\e[0;100;33m          AUTO-REBOOT LOG          \e[0m"
+    echo -e "\e[1m==============================================\033[0m"
     echo -e ""
     echo "No reboot activity found"
     echo -e ""
-    echo -e "\e[33m==============================================\033[0m"
+    echo -e "\e[1m==============================================\033[0m"
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
     auto-reboot
 	else
 	clear
-    echo -e "\e[33m==============================================\033[0m"
-    echo -e "\e[0;100;33m        < AUTO-REBOOT LOG >        \e[0m"
-    echo -e "\e[33m==============================================\033[0m"
+    echo -e "\e[1m==============================================\033[0m"
+    echo -e "\e[0;100;33m          AUTO-REBOOT LOG          \e[0m"
+    echo -e "\e[1m==============================================\033[0m"
     echo -e ""    
 	echo 'LOG REBOOT'
 	cat /root/log-reboot.txt
     echo -e ""
-    echo -e "\e[33m==============================================\033[0m"
+    echo -e "\e[1m==============================================\033[0m"
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
     auto-reboot    
 fi
 elif test $x -eq 9; then
 clear
-echo -e "\e[33m==============================================\033[0m"
-echo -e "\e[0;100;33m        < AUTO-REBOOT LOG >        \e[0m"
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
+echo -e "\e[0;100;33m          AUTO-REBOOT LOG          \e[0m"
+echo -e "\e[1m==============================================\033[0m"
 echo -e ""  
 echo "" > /root/log-reboot.txt
 echo "Auto Reboot Log successfully deleted!"
 echo -e ""
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 auto-reboot 
