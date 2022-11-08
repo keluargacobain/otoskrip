@@ -116,14 +116,14 @@ fi
 }
 
 clear
-echo -e "\033[0;34m==============================================\033[0m"
-echo -e "\E[0;41;36m          < SSH WEBSOCKET >          \E[0m"
+echo -e "\033[1m==============================================\033[0m"
+echo -e "\E[1m            SSH WEBSOCKET            \E[0m"
 echo -e "\033[0;34m==============================================\033[0m"
 echo ""
 echo -e " 1. ENABLE SSH WEBSOCKET"
 echo -e " 2. DISABLE SSH WEBSOCKET"
 echo ""
-echo -e "\033[0;34m==============================================\033[0m"
+echo -e "\033[1m==============================================\033[0m"
 echo ""
 read -rp "INPUT NUMBER : " -e num
 if [[ "$num" = "1" ]]; then

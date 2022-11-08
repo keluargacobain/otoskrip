@@ -12,9 +12,9 @@ fi
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
-echo -e "\e[33m==============================================\033[0m"
-echo -e "\E[0;41;36m          < SSH ACCOUNT >          \E[0m"
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
+echo -e "\E[0;41;36m            SSH ACCOUNT            \E[0m"
+echo -e "\e[1m==============================================\033[0m"
 read -p "Username : " Login
 read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
@@ -40,13 +40,13 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[0;41;36m          < SSH Account >          \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\E[0;41;36m            SSH Account            \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Username    : $Login" | tee -a /etc/log-create-user.log
 echo -e "Password    : $Pass" | tee -a /etc/log-create-user.log
 echo -e "Expired On  : $exp" | tee -a /etc/log-create-user.log
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
 echo -e "IP          : $IP" | tee -a /etc/log-create-user.log
 echo -e "Host        : $domen" | tee -a /etc/log-create-user.log
 echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
@@ -54,7 +54,7 @@ echo -e "SSH-WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH-SSL-WS  : $wsssl" | tee -a /etc/log-create-user.log
 echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/log-create-user.log
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Payload WSS" | tee -a /etc/log-create-user.log
 echo -e "
 GET wss://isi_bug_disini HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]
@@ -63,17 +63,17 @@ echo -e "Payload WS" | tee -a /etc/log-create-user.log
 echo -e "
 GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]
 " | tee -a /etc/log-create-user.log
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
 
 else
 
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[0;41;36m          < SSH Account >          \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m            SSH Account            \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Username    : $Login" | tee -a /etc/log-create-user.log
 echo -e "Password    : $Pass" | tee -a /etc/log-create-user.log
 echo -e "Expired On  : $exp" | tee -a /etc/log-create-user.log
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
 echo -e "IP          : $IP" | tee -a /etc/log-create-user.log
 echo -e "Host        : $domen" | tee -a /etc/log-create-user.log
 echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
@@ -81,9 +81,9 @@ echo -e "SSH-WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH-SSL-WS  : $wsssl" | tee -a /etc/log-create-user.log
 echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/log-create-user.log
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Expired On     : $exp" | tee -a /etc/log-create-user.log
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Payload WSS" | tee -a /etc/log-create-user.log
 echo -e "
 GET wss://isi_bug_disini HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]
@@ -92,7 +92,7 @@ echo -e "Payload WS" | tee -a /etc/log-create-user.log
 echo -e "
 GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]
 " | tee -a /etc/log-create-user.log
-echo -e "\e[33m==============================================\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m==============================================\033[0m" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"

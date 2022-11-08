@@ -66,18 +66,18 @@ fi
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 
 clear
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
 echo ""
 read -rp "DOMAIN/HOST: " -e host
 echo ""
 if [ -z $host ]; then
 echo "????"
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
 read -n 1 -s -r -p "PRESS ANY KEY TO BACK ON MENU"
 menu
 else
 echo "IP=$host" > /var/lib/ipvps.conf
-echo -e "\e[33m==============================================\033[0m"
+echo -e "\e[1m==============================================\033[0m"
 echo "DONT FORGET TO RENEW CERT"
 echo ""
 read -n 1 -s -r -p "PRESS ANY KEY TO BACK ON MENU"
