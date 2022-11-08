@@ -25,7 +25,7 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo -e "\\E[0;41;36m       Delete Shadowsocks Account      \E[0m"
+        echo -e "\e[1m       Delete Shadowsocks Account      \E[0m"
         echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 		echo ""
 		echo "You have no existing clients!"
@@ -37,7 +37,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 
 	clear
 	echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\\E[0;41;36m       Delete Shadowsocks Account      \E[0m"
+    echo -e "\e[1m       Delete Shadowsocks Account      \E[0m"
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo "  User       Expired  " 
 	echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"

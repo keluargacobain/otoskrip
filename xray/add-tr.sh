@@ -74,7 +74,7 @@ fi
 tr="$(cat ~/log-install.txt | grep -w "Trojan WS " | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;41;36m       ADD TROJAN ACCOUNT          \E[0m"
+echo -e "\e[1m       ADD TROJAN ACCOUNT          \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
 		read -rp "User: " -e user
@@ -83,7 +83,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 		if [[ ${user_EXISTS} == '1' ]]; then
 clear
 		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-		echo -e "\E[0;41;36m       ADD TROJAN ACCOUNT          \E[0m"
+		echo -e "\e[1m       ADD TROJAN ACCOUNT          \E[0m"
 		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
@@ -107,7 +107,7 @@ trojanlink1="trojan://${uuid}@${domain}:443?mode=gun&security=tls&type=grpc&serv
 trojanlink="trojan://${uuid}@isi_bug_disini:443?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[0;41;36m           TROJAN ACCOUNT           \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[1m           TROJAN ACCOUNT           \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Remarks        : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Host/IP        : ${domain}" | tee -a /etc/log-create-user.log
